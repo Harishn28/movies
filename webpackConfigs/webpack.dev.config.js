@@ -69,6 +69,6 @@ module.exports = {
         { from: new RegExp('\\' + appHostedPath + '((\\/.*)|())', 'g'), to: `${appStaticAssetsPath}/index.html` },
       ],
     },
-    // open: true
+    open: true
   }
 };

@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { API_KEY_V3 } from '../API_KEY';
+
+const TMDB_API_KEY = process.env.TMDB_API_KEY;
 
 const instance = axios.create({
     baseURL: 'https://api.themoviedb.org/3',
@@ -8,7 +9,7 @@ const instance = axios.create({
   
 
 instance.defaults.params = {
-    'api_key': API_KEY_V3,
+    'api_key': TMDB_API_KEY,
     'language': 'en-US',
 };
 
