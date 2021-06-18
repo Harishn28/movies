@@ -24,3 +24,4 @@ yarn-error.log*
 
 src/API_KEY.js
 /dist
+.env
