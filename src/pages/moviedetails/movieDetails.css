@@ -1,0 +1,38 @@
+.landing_container {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.landing_info {
+    margin: 15vh 0vw 15vh 0vw;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.poster_image {
+    width: 15vw;
+    height: 40vh;
+    margin: 15vh 5vw 15vh 10vw;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.secondaryHeader {
+    color: white;
+    font-size: 30;
+    font-weight: bold;
+}
+
+.secondaryInfo {
+    color: white;
+    font-size: 25;
+}
