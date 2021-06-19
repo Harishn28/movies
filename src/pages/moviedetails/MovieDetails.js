@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import _get from 'lodash/get';
 import styles from './movieDetails.css';
+import { ROUTES } from 'pages/app/Routes';
 import { formatDate } from 'utils/dateUtils';
 import { formatRunTime } from 'utils/timeUtils';
 import { GenresLabel }  from 'components/labels';
+import MovieCredits from './components/movieCredits';
 
 class MovieDetails extends Component{
     constructor(props){
@@ -24,6 +26,14 @@ class MovieDetails extends Component{
         this.setState({ movieDetails });
     }
 
+
+    openProfilePage = (id) => {
+        console.log('abcd openProfile --->', id);
+        const { history } = this.props;
+        const path = ROUTES.PROFILE_DETAILS.replace(':id', id);
+        history.push(path);
+    }
+
     render(){
         const { movieDetails } = this.state;
 
@@ -36,6 +46,7 @@ class MovieDetails extends Component{
             overview,
             runtime,
             genres = [],
+            id
          } = movieDetails;
 
 
@@ -49,6 +60,7 @@ class MovieDetails extends Component{
                     <GenresLabel genres={genres}/>
                     <p className={styles.secondaryHeader}>{'Overview'}</p>
                     <p className={styles.secondaryInfo}>{overview}</p>
+                    <MovieCredits movieId={id} openProfilePage={this.openProfilePage}/>
                 </div>
             </div>
             
