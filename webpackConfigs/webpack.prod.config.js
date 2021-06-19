@@ -4,8 +4,9 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UploadToCDNPlugin = require('./UploadToCDNPlugin');
 
-const buildDir = path.resolve(process.cwd(), 'dist');
+const buildDir = path.resolve(process.cwd(), 'build');
 const appStaticAssetsPath = process.env.APP_STATIC_ASSETS_PATH;
 
 module.exports = {
@@ -59,6 +60,7 @@ module.exports = {
       //to make values values available in code (Ex: in file src/pages/app/Routes.js)
       'process.env':  JSON.stringify(process.env) 
     }),
+    // new UploadToCDNPlugin(),
     // new BundleAnalyzerPlugin()
   ],
   optimization: {

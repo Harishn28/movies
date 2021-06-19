@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
-const buildDir = path.resolve(process.cwd(), 'dist');
+const buildDir = path.resolve(process.cwd(), 'build');
 
 
 const appStaticAssetsPath = process.env.APP_STATIC_ASSETS_PATH;
